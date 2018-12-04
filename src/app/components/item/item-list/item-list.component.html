@@ -1,0 +1,12 @@
+<table (click)="editItem()">
+  <tbody>
+    <tr>
+      <td>{{ item.id }}</td>
+      <td><img appHandleImage [src]="'../../assets/img/' + item.imageFileName" width="200px" height="200px"></td>
+      <td>{{ item.name }}</td>
+      <td>{{ item.description }}</td>
+      <td>{{ item.price }}</td>
+      <td>{{ item.isBestSeller ? 'Yes' : 'No' }}</td>
+    </tr>
+  </tbody>
+</table>

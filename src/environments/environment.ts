@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  VERSION: require('../../package.json').version,
+  production: false,
+  firebase: {
+    apiKey: 'AIzaSyA2icho_IpNSI8BUDdrJrM28PZAj9n1q1g',
+    authDomain: 'handywings-d6698.firebaseapp.com',
+    databaseURL: 'https://handywings-d6698.firebaseio.com',
+    projectId: 'handywings-d6698',
+    storageBucket: 'handywings-d6698.appspot.com',
+    messagingSenderId: '48370462304',
+  },
 };
 
 /*

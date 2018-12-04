@@ -1,0 +1,27 @@
+%table {
+  table-layout: fixed;
+  width: 100%;
+
+  td {
+    padding: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  td:nth-child(1) {
+    width: 150px;
+  }
+  td:nth-child(2) {
+    width: 250px;
+  }
+  td:nth-child(3) {
+    width: 150px;
+  }
+  td:nth-child(5) {
+    width: 150px;
+  }
+  td:nth-child(6) {
+    width: 150px;
+  }
+}

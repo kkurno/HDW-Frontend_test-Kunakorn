@@ -1,0 +1,57 @@
+.modal-remove {
+  display: block;
+  overflow: hidden;
+  padding: 10px;
+  margin: 0 auto;
+  background-color: white;
+  width: fit-content;
+  border-radius: 10px;
+
+  .header {
+    height: 50px;
+    border-bottom: 2px solid #e2e2e2;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .body {
+    padding: 0 20px 0 20px;
+
+    .items {
+      display: block;
+      max-height: 300px;
+      overflow: auto;
+      margin-bottom: 10px;
+    }
+
+    table {
+      table-layout: fixed;
+      width: 280px;
+
+      td {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      td:nth-child(1) {
+        width: 20px;
+      }
+      td:nth-child(2) {
+        width: 60px;
+      }
+      td:nth-child(4) {
+        width: 80px;
+        text-align: end;
+        font-weight: bold;
+        color: red;
+        cursor: pointer;
+      }
+    }
+  }
+
+  button {
+    float: right;
+    margin-left: 10px;
+  }
+}

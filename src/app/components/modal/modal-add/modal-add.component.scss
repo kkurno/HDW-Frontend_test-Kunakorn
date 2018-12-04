@@ -1,0 +1,46 @@
+.modal-add {
+  display: block;
+  overflow: hidden;
+  padding: 10px;
+  margin: 0 auto;
+  background-color: white;
+  width: fit-content;
+  border-radius: 10px;
+
+  .header {
+    height: 50px;
+    border-bottom: 2px solid #e2e2e2;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .body table {
+    border-collapse: separate; 
+    border-spacing: 5px;
+    width: 500px;
+    margin-bottom: 20px;
+
+    tbody tr {
+
+      td {
+        vertical-align: top;
+      }
+      td:nth-child(1) {
+        width: 30%;
+      }
+      td:nth-child(2) {
+        width: 70%;
+
+        input, textarea {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  button {
+    float: right;
+    margin-right: 10px;
+  }
+}

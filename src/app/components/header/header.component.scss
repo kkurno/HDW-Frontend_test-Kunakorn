@@ -1,0 +1,48 @@
+@import '../../../styles.scss';
+
+.main {
+  border: 2px dashed $sub-color;
+  min-width: fit-content;
+  white-space: nowrap;
+}
+
+.title {
+  font-size: 20px;
+  color: blue;
+}
+
+.menu-list {
+  @extend %disabled-text-highlight;
+
+  cursor: pointer;
+  height: fit-content;
+  width: 80px;
+  line-height: 30px;
+  margin: 0 5px;
+  text-align: center;
+  border-style: dashed;
+  border-color: $sub-color;
+  border-top: 1px;
+  border-bottom: 1px;
+  font-weight: bold;
+
+  &:hover {
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    background-color: #aaaaaa;
+    color: white;
+  }
+}
+
+.search-area {
+  height: fit-content;
+}
+
+.search-input {
+  border-color: gray;
+  padding: 5px;
+
+  &:focus {
+    outline: none;
+  }
+}

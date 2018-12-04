@@ -1,0 +1,32 @@
+<div class="modal-edit">
+  <div class="header d-flex flex-row justify-content-center">
+    Id :&nbsp;<span style="color: blue; font-weight: bold;">{{ data.id }}</span>
+  </div>
+  <div class="body">
+    <form [formGroup]="itemFormData" (ngSubmit)="editItem(itemFormData)" novalidate>
+      <table>
+        <tbody>
+          <tr>
+            <td><span style="color: red;">*</span> Name: </td>
+            <td><input type="text" class="form-control" name="name" formControlName="name"></td>
+          </tr>
+          <tr>
+            <td>Image file name: </td>
+            <td><input type="url" class="form-control" name="imageFileName" formControlName="imageFileName"></td>
+          </tr>
+          <tr>
+            <td>Description: </td>
+            <td><textarea type="text" class="form-control" name="description" formControlName="description"></textarea></td>
+          </tr>
+          <tr>
+            <td><span style="color: red;">*</span> Price: </td>
+            <td><input type="number" class="form-control" name="price" formControlName="price"></td>
+          </tr>
+        </tbody>
+      </table>
+      <app-validation [validationText]="validationText"></app-validation>
+      <button type="submit" class="btn btn-primary">Edit</button>
+      <button type="button" class="btn btn-light" (click)="closeModal()">Cancel</button>
+    </form>
+  </div>
+</div>

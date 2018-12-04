@@ -1,0 +1,20 @@
+<div>
+  <div class="main d-flex">
+    <div class="p-3 title">
+      {{ headerName }}
+    </div>
+    <div class="p-3 d-flex flex-row">
+      <div class="menu-list" (click)="openAddModal()">
+        add
+      </div>
+      <div class="menu-list" (click)="openRemoveModal()">
+        remove
+      </div>
+    </div>
+    <div class="search-area ml-auto p-3 d-flex flex-row">
+      <input class="form-control search-input" type="text" [(ngModel)]="keyword" #ctrl="ngModel" (keyup.enter)="search()" (keyup)="search()">
+      &nbsp;
+      <button type="button" class="search-button btn btn-light" (click)="search()">Filter name</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,5 @@
+<div [ngSwitch]="type" id="modal">
+  <app-modal-edit *ngSwitchCase="'edit'" [data]="data" [callback]="callback"></app-modal-edit>
+  <app-modal-add *ngSwitchCase="'add'" [data]="data" [callback]="callback"></app-modal-add>
+  <app-modal-remove *ngSwitchCase="'remove'" [data]="data" [callback]="callback"></app-modal-remove>
+</div>

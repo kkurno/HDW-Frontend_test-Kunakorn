@@ -1,0 +1,19 @@
+@import '../../../../styles.scss';
+@import '../items.component.scss';
+
+table {
+  @extend %table;
+  @include box-shadow(2px 2px 4px $sub-color);
+
+  margin-bottom: 20px;
+  border-top: 2px solid $sub-color;
+
+  td {
+    padding: 5px;
+    border-right: 2px solid $sub-color; 
+  }
+
+  td:nth-child(1) {
+    border-left: 2px solid $sub-color;
+  }
+}

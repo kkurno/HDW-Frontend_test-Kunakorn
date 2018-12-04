@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+
+// global variable
+$main-color: #5a81cf;
+$sub-color: #95a8ce;
+
+$hover-color: #bbddff;
+
+// global style
+body {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+// condition style
+%disabled-text-highlight {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+// mixin
+@mixin box-shadow($style) {
+  -moz-box-shadow: $style;
+  -webkit-box-shadow: $style;
+  box-shadow: $style;
+  border-top: $style;
+}

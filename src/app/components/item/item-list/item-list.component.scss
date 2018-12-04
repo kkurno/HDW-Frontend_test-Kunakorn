@@ -1,0 +1,15 @@
+@import '../items.component';
+@import '../../../../styles';
+
+table {
+  @extend %table;
+
+  height: 200px;
+  cursor: pointer;
+
+  &:hover {
+    border-style: solid;
+    border-width: 2px;
+    border-color: $hover-color;
+  }
+}

@@ -1,0 +1,31 @@
+<div class="modal-remove">
+  <div class="header d-flex flex-row justify-content-center">
+    Remove products
+  </div>
+  <div class="body">
+    <div *ngIf="!data.items.length">No product found</div>
+    <div *ngIf="data.items.length" class="items">
+      <table>
+        <tbody>
+          <tr>
+            <td></td>
+            <td style="font-weight: bold;">Id</td>
+            <td style="font-weight: bold;">Name</td>
+            <td></td>
+          </tr>
+          <tr *ngFor="let item of data.items; let i = index">
+            <td><input type="checkbox" (change)="check($event.target.checked, i)"></td>
+            <td>{{ item.id }}</td>
+            <td>{{ item.name }}</td>
+            <td (click)="removeItem([i])">remove</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <app-validation [validationText]="validationText"></app-validation>
+    <div style="margin-top: 30px;">
+      <button *ngIf="data.items.length" type="submit" class="btn btn-danger" (click)="removeItems()">Remove selected items</button>
+      <button type="button" class="btn btn-light" (click)="closeModal()">{{ data.items.length ? 'Cancel' : 'Close'}}</button>
+    </div>
+  </div>
+</div>
